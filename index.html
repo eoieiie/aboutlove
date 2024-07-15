@@ -3,43 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Webpage</title>
+    <title>Calendar with Image</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>정새움 없이 어떻게 사나!</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is the home section.</p>
-        </section>
-        <section id="about">
-            <h2>About</h2>
-            <p>This is the about section.</p>
-        </section>
-        <section id="services">
-            <h2>Services</h2>
-            <p>This is the services section.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>010-7747-2218</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 정새움빨리밥먹어라!</p>
-        <p>&copy; 2024 네. 알겠습니다.</p>
-        <p>&copy; 2024 지금 피자 먹고 있어요.</p>
-    </footer>
+    <div class="container">
+        <div class="image-container">
+            <img id="changing-image" src="image.png" alt="Image">
+        </div>
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <h1>May</h1>
+            </div>
+            <table class="calendar">
+                <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="prev-month">28</td>
+                        <td class="prev-month">29</td>
+                        <td class="prev-month">30</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>20</td>
+                        <td class="selected">21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                        <td class="next-month">1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
