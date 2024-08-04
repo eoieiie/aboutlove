@@ -76,13 +76,13 @@ body {
 .navbar {
     background-color: #333;
     color: white;
-    padding: 10px 20px;
+    padding: 20px 20px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 50px; /* 명확한 높이 설정 */
+    height: 25px; /* 명확한 높이 설정 */
 }
 
 .logo-link {
@@ -95,13 +95,14 @@ body {
 
 .nav-links {
     list-style: none;
-    padding: 0;
+    padding: 10;
     display: flex;
-    margin: 0;
+    margin: 20;
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 7px;
+    margin-right: 50px; /* 이 부분이 없어서 content가 잘렸던거임 */
 }
 
 .nav-links a {
