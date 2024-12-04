@@ -1,60 +1,116 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    overflow: hidden; /* 전체 페이지의 스크롤 제거 */
 }
 
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 1rem 0;
-    text-align: center;
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh; /* 컨테이너의 높이를 화면 높이에 맞춤 */
+    overflow: hidden; /* 컨테이너 내부 스크롤 제거 */
 }
 
-header h1 {
-    margin-bottom: 0.5rem;
+.image-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    overflow: hidden; /* 이미지 컨테이너 내 스크롤 제거 */
 }
 
-nav ul {
-    list-style: none;
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 이미지가 비율을 유지하면서 최대 크기에 맞춰짐 */
+}
+
+.calendar-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: calc(100vh - 50px); /* 네비게이션 바의 높이를 고려한 조정 */
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-main {
-    padding: 2rem;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-section h2 {
-    margin-bottom: 1rem;
-}
-
-footer {
-    background: #35424a;
-    color: #ffffff;
+.calendar-header {
     text-align: center;
-    padding: 1rem 0;
-    position: fixed;
+    padding: 10px;
+    background-color: #f0f0f0;
     width: 100%;
-    bottom: 0;
+}
+
+.calendar-header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.calendar {
+    width: 100%;
+    height: calc(100% - 60px); /* 헤더를 제외한 나머지 높이 */
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.calendar th, .calendar td {
+    width: 14.28%;
+    height: calc((100% - 40px) / 6); /* 헤더 높이를 제외한 나머지에서 6행 분할 */
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.prev-month, .next-month {
+    color: #ccc;
+}
+
+.selected {
+    background-color: #00695c;
+    color: white;
+    border-radius: 50%;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 20px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 25px; /* 명확한 높이 설정 */
+}
+
+.logo-link {
+    flex: 0 0 auto;
+}
+
+.navbar-logo {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 10;
+    display: flex;
+    margin: 20;
+}
+
+.nav-links li {
+    margin-left: 7px;
+    margin-right: 50px; /* 이 부분이 없어서 content가 잘렸던거임 */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #f2f2f2;
 }
